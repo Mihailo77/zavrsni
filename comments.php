@@ -2,7 +2,7 @@
 
 <?php
 
-$sql = "SELECT comments.Author AS x_author, comments.Text FROM comments LEFT JOIN posts ON posts.Id=comments.post_Id WHERE comments.post_Id={$_GET['Id']}";
+$sql = "SELECT comments.author AS x_author, comments.text FROM comments LEFT JOIN posts ON posts.id=comments.post_id WHERE comments.post_id={$_GET['id']}";
 $statement = $connection->prepare($sql);
 
 $statement->execute();
